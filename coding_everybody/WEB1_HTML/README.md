@@ -1,4 +1,4 @@
-# 생활코딩 > WEB > WEB1 - HTML & Internet
+# WEB1 - HTML & Internet
 
 ### hello world! 웹 페이지 작성하고 열기
 * hello.html 확장자 파일 작성
