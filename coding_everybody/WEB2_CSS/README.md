@@ -93,7 +93,7 @@ a {
     * 왜? id는 유일하게 선언 가능. 중복되지 않는 값이므로 우선시. 즉, 구체적인 요소의 우선순위가 높다.  
 * `css selector`로 검색하면 다양한 자료가 나온다.
 
-### 박스모델을 만들기 전에
+### 박스모델
 ```html
 <!DOCTYPE html>
 <html>
@@ -128,65 +128,42 @@ a {
     </body>
 </html>
 ```
-
 ```html
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="uft-8">
-        <title></title>
-        <style>
-            h1 {
-                border: 5px solid red;
-                padding: 20px;
-                margin: 20px;
-                display: block;
-                width: 100px;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>test</h1>
-        <h1>test</h1>
-    </body>
-</html>
+<style>
+    h1 {
+        border: 5px solid red;
+        padding: 20px;
+        margin: 20px;
+        display: block;
+        width: 100px;
+    }
+</style>
 ```
-
 * 웹 페이지에서 `우클릭-검사`를 누르면 css에 대한 내용도 나온다.
 
 ### 박스모델 만들어보기
 ```html
-  <style>
-    h1 {
-      font-size:50px;
-      text-align:center;
-      border-bottom: 1px solid gray;
-      margin: 0;
-      padding: 10px;
-    }
-    #active {
-      color: red;
-    }
-    a {
-      color:black;
-      text-decoration: none;
-    }
-    .saw {
-      color: gray;
-    }
-    ol {
-      border-right: 1px solid gray;
-      width: 80px;
-      margin: 0;
-      padding: 20px;
-    }
-    body {
-      margin: 0;
-    }
-  </style>
+<style>
+  h1 {
+    font-size:50px;
+    text-align:center;
+    border-bottom: 1px solid gray;
+    margin: 0;
+    padding: 10px;
+  }
+  ol {
+    border-right: 1px solid gray;
+    width: 80px;
+    margin: 0;
+    padding: 20px;
+  }
+  body {
+    margin: 0;
+  }
+</style>
 ```
 
-### 그리드를 만들기 전에
+### 그리드란?
 ```html
 <!DOCTYPE html>
 <html>
@@ -212,46 +189,23 @@ a {
     </body>
 </html>
 ```
-
 * https://caniuse.com/
 
 ### 그리드 사용해보기
-```html
-  <style>
-    body {
-      margin: 0;
-    }
-    a {
-      color:black;
-      text-decoration: none;
-    }
-    h1 {
-      font-size:50px;
-      text-align:center;
-      border-bottom: 1px solid gray;
-      margin: 0;
-      padding: 10px;
-    }
-    ol {
-      border-right: 1px solid gray;
-      width: 80px;
-      margin: 0;
-      padding: 32px;
-    }
-    #grid {
-      display: grid;
-      grid-template-columns: 150px 1fr;
-    }
-    #grid ol {
-      padding-left: 33px;
-    }
-    #article {
-      padding: 25px;
-    }
-  </style>
+```css
+#grid {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+}
+#grid ol {
+  padding-left: 33px;
+}
+#article {
+  padding: 25px;
+}
 ```
 
-### 미디어 쿼리란?
+### 미디어쿼리란?
 ```html
 <!DOCTYPE html>
 <html>
@@ -280,50 +234,17 @@ a {
 ```
 폭이 600px 이하가 되면 div가 사라지는 예제
 
-
 ### 반응형 웹
 * 화면의 크기에 따라 달라지는 디자인
-```html
-  <style>
-    body {
-      margin: 0;
-    }
-    a {
-      color:black;
-      text-decoration: none;
-    }
-    h1 {
-      font-size:50px;
-      text-align:center;
-      border-bottom: 1px solid gray;
-      margin: 0;
-      padding: 10px;
-    }
-    ol {
-      border-right: 1px solid gray;
-      width: 80px;
-      margin: 0;
-      padding: 32px;
-    }
-    #grid {
-      display: grid;
-      grid-template-columns: 150px 1fr;
-    }
-    #grid ol {
-      padding-left: 33px;
-    }
-    #article {
-      padding: 25px;
-    }
-    @media(max-width:800px) {
-      #grid {
-        display: block;
-      }
-      ol {
-        border-right: none;
-      }
-    }
-  </style>
+```css
+@media(max-width:800px) {
+  #grid {
+    display: block;
+  }
+  ol {
+    border-right: none;
+  }
+}
 ```
 
 ### .css 파일
